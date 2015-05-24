@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     'use strict';
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
-        assetsDir: 'app',
+        assetsDir: 'src',
         distDir: 'dist',
         availabletasks: {
             tasks: {
