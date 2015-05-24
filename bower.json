@@ -1,0 +1,18 @@
+{
+  "name": "angular-gpquery-widgets",
+  "version": "",
+  "dependencies": {
+    "angular": "",
+    "angular-touch": "",
+    "angular-animate": "",
+    "angular-sanitize": "",
+    "angular-snap": "1.4.1",
+    "angular-carousel": "0.2.2"
+  },
+  "devDependencies": {
+    "angular-mocks": ""
+  },
+  "resolutions": {
+    "angular": "1.3.15"
+  }
+}
