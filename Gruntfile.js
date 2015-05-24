@@ -126,7 +126,7 @@ module.exports = function (grunt) {
         },
         jshint: {
             options: { jshintrc: '.jshintrc' },
-            all: { src: ['<%= assetsDir %>/js/**/*.js'] }
+            all: { src: ['<%= assetsDir %>/**/*.js'] }
         },
         watch: {
             scss: {
@@ -146,12 +146,12 @@ module.exports = function (grunt) {
         },
         csslint: {
             options: { csslintrc: '.csslintrc' },
-            all: { src: ['<%= assetsDir %>/css/**/*.css'] }
+            all: { src: ['<%= assetsDir %>/**/*.css'] }
         },
         concat: {
             dist: {
-                src: ['<%= assetsDir %>/js/**/*.scss'],
-                dest: '<%= assetsDir %>/scss/app.scss' 
+                src: ['<%= assetsDir %>/**/*.scss'],
+                dest: '<%= assetsDir %>/app.scss' 
             }
         },
         sass: {
@@ -159,14 +159,14 @@ module.exports = function (grunt) {
                 style: 'expanded',
                 trace: true
             },
-            all: { files: { '<%= assetsDir %>/css/app.css': '<%= assetsDir %>/scss/app.scss' } }
+            all: { files: { '<%= assetsDir %>/app.css': '<%= assetsDir %>/app.scss' } }
         },
         rev: {
             dist: {
                 files: {
                     src: [
-                        '<%= distDir %>/js/{,*/}*.js',
-                        '<%= distDir %>/css/{,*/}*.css'
+                        '<%= distDir %>/{,*/}*.js',
+                        '<%= distDir %>/{,*/}*.css'
                     ]
                 }
             }
@@ -176,7 +176,7 @@ module.exports = function (grunt) {
                 jshint: grunt.file.readJSON('.jshintrc'),
                 title: '<%= name %>'
             },
-            all: { files: { 'reports/complexity': ['<%= assetsDir %>/js/**/*.js'] } }
+            all: { files: { 'reports/complexity': ['<%= assetsDir %>/**/*.js'] } }
         },
         imagemin: {
             dist: {

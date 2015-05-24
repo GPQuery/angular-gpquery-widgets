@@ -22,7 +22,7 @@ module.exports = function (config) {
                 'vendor/revolunet-angular-carousel/dist/angular-carousel.js',
                 'vendor/angular-snap/angular-snap.js',
                 'vendor/angular-mocks/angular-mocks.js',
-                'js/**/*.js',
+                '**/*.js',
                 '../test/unit/**/*.js'
             ],
 
@@ -68,7 +68,7 @@ module.exports = function (config) {
 
             preprocessors: {
                 '**/*.html': ['ng-html2js'],
-                '**/js/*.js': ['coverage']
+                '**/*.js': ['coverage']
             },
 
             plugins: [
