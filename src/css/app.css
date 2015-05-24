@@ -4,4 +4,9 @@
   padding: 20px 30px;
 }
 
+.flag {
+  height: rem(2.8);
+  width: rem(2.8);
+}
+
 /*# sourceMappingURL=app.css.map */

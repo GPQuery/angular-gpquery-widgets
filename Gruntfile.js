@@ -130,7 +130,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scss: {
-                files: ['<%= assetsDir %>/scss/**/*.scss'],
+                files: ['<%= assetsDir %>/**/*.scss'],
                 tasks: ['sass:all']
             }
         },
@@ -147,6 +147,12 @@ module.exports = function (grunt) {
         csslint: {
             options: { csslintrc: '.csslintrc' },
             all: { src: ['<%= assetsDir %>/css/**/*.css'] }
+        },
+        concat: {
+            dist: {
+                src: ['<%= assetsDir %>/js/**/*.scss'],
+                dest: '<%= assetsDir %>/scss/app.scss' 
+            }
         },
         sass: {
             options: {
@@ -240,6 +246,7 @@ module.exports = function (grunt) {
         'plato'
     ]);
     grunt.registerTask('dev', [
+        'concat',
         'sass',
         'browserSync',
         'karma:dev_unit:start',
